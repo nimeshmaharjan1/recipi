@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .product-card {
+    @apply transition-all;
+    &:hover {
+      scale: 1.01;
+      h3 {
+        @apply text-secondary;
+      }
+    }
+  }
+}
