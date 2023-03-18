@@ -12,6 +12,38 @@ export interface RecipeResult {
   imageType: string;
 }
 
+interface AnalyzedInstruction {
+  name: string;
+  steps: Step[];
+}
+
+export interface Step {
+  number: number;
+  step: string;
+  ingredients: Ingredient[];
+  equipment: Equipment[];
+  length?: Length;
+}
+
+export interface Ingredient {
+  id: number;
+  name: string;
+  localizedName: string;
+  image: string;
+}
+
+export interface Equipment {
+  id: number;
+  name: string;
+  localizedName: string;
+  image: string;
+}
+
+export interface Length {
+  number: number;
+  unit: string;
+}
+
 export interface GetRecipeInformation {
   id: number;
   title: string;
@@ -27,7 +59,7 @@ export interface GetRecipeInformation {
   healthScore: number;
   spoonacularScore: number;
   pricePerServing: number;
-  analyzedInstructions: any[];
+  analyzedInstructions: AnalyzedInstruction[];
   cheap: boolean;
   creditsText: string;
   cuisines: any[];
@@ -99,4 +131,13 @@ export interface ProductMatch {
   ratingCount: number;
   score: number;
   link: string;
+}
+
+export interface SimilarRecipe {
+  id: number;
+  imageType: string;
+  readyInMinutes: number;
+  servings: number;
+  sourceUrl: string;
+  title: string;
 }

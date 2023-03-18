@@ -12,7 +12,9 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <title>Recipi</title>
       </Head>
       <Header></Header>
-      <main className="container mx-auto py-7 px-4 md:px-8">{children}</main>
+      <main className="container mx-auto py-5 px-4 md:py-7 md:px-8">
+        {children}
+      </main>
     </div>
   );
 };

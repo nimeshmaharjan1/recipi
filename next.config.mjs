@@ -19,7 +19,7 @@ const config = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["spoonacular.com"],
+    domains: ["spoonacular.com", "cloud.foodista.com"],
   },
 };
 export default config;
